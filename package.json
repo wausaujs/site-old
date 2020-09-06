@@ -1,0 +1,24 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "The wausaujs.org site",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "debug": "DEBUG=* eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wausaujs/site.git"
+  },
+  "author": "Jack Smith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wausaujs/site/issues"
+  },
+  "homepage": "https://github.com/wausaujs/site#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0"
+  }
+}
