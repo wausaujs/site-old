@@ -93,7 +93,7 @@ body {
 .rsvps button {
   background-color: var(--theme-highlight);
   color: white;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   margin-right: 1rem;
 }
 
