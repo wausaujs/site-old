@@ -1,5 +1,6 @@
 :root {
   --theme-color: #f7e018;
+  --theme-highlight: #ca18f7;
 }
 
 * {
@@ -16,16 +17,29 @@ h6 {
   font-family: "Source Serif Pro", serif;
 }
 
+a {
+  text-decoration: none;
+}
+
+button {
+  min-height: 1.5rem;
+  padding: 0.5rem 1rem;
+}
+
 body {
   font-size: 16px;
   font-family: "Source Sans Pro", sans-serif;
+}
+
+.row:nth-child(n + 1) {
+  padding: 1rem 1rem 0 1rem;
 }
 
 .hero {
   display: grid;
   place-items: center;
   background-color: var(--theme-color);
-  height: 60vh;
+  height: 50vh;
 }
 
 .hero header {
@@ -44,36 +58,33 @@ body {
   font-size: 0.75rem;
 }
 
-.meetings {
-  padding: 1rem;
+.hero div[data-netlify-identity-button] a {
+  background-color: var(--theme-highlight);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-size: 1rem;
 }
 
-.meetings ol {
-  margin-top: 1rem;
-  list-style: none;
-}
-
-.meetings article {
+.card {
   display: grid;
   grid-template-areas:
     "image header"
     "image content";
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
   grid-gap: 1rem;
-  height: 20vh;
 }
 
-.meetings article img {
+.card img {
   grid-area: image;
-  width: 200px;
-  height: 200px;
+  width: 300px;
 }
 
-.meetings article header {
+.card header {
   grid-area: header;
 }
 
-.meetings article p {
+.card p {
   grid-area: content;
 }
