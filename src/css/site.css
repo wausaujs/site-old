@@ -1,0 +1,79 @@
+:root {
+  --theme-color: #f7e018;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Source Serif Pro", serif;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.hero {
+  display: grid;
+  place-items: center;
+  background-color: var(--theme-color);
+  height: 60vh;
+}
+
+.hero header {
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 8rem;
+}
+
+.hero h2 {
+  font-size: 2rem;
+}
+
+.hero small {
+  font-size: 0.75rem;
+}
+
+.meetings {
+  padding: 1rem;
+}
+
+.meetings ol {
+  margin-top: 1rem;
+  list-style: none;
+}
+
+.meetings article {
+  display: grid;
+  grid-template-areas:
+    "image header"
+    "image content";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-gap: 1rem;
+  height: 20vh;
+}
+
+.meetings article img {
+  grid-area: image;
+  width: 200px;
+  height: 200px;
+}
+
+.meetings article header {
+  grid-area: header;
+}
+
+.meetings article p {
+  grid-area: content;
+}

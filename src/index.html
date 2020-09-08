@@ -1,0 +1,32 @@
+---
+title: Wausau.js
+layout: base
+---
+
+<section class="hero">
+  <header>
+    <h1>{{ title }}</h1>
+    <h2>Spreading the <em>JavaScript*</em> love one meetup at a time.<h2>
+    <small>* JavaScript and anything else we thing is cool</small>
+  </header>
+</section>
+
+<section class="meetings">
+  <h2>Upcoming Events</h2>
+  <ol>
+    {%- for meeting in collections.meeting -%}
+    <li>
+        <article>
+          <img src="{{ meeting.data.image | url }}" />
+          <header>
+            <a href="{{ meeting.url | url }}">
+              <h2>{{ meeting.date | date }} - {{ meeting.data.title }}</h2>
+            </a>
+          </header>
+          <p>{{ meeting.data.excerpt }}</p>
+        </article>
+
+    </li>
+    {%- endfor -%}
+  </ol>
+</section>
