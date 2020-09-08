@@ -15,14 +15,15 @@ layout: base
 <h2 class="row">Upcoming Events</h2>
 
 {%- for meeting in collections.meeting -%}
-  <article class="row card">
+  <article class="row card" data-id="{{ meeting.data.id }}">
     <img src="{{ meeting.data.image | url }}" />
     <header>
       <a href="{{ meeting.url | url }}">
         <h2>{{ meeting.date | date }} - {{ meeting.data.title }}</h2>
       </a>
-    </header>
-    <p>{{ meeting.data.excerpt }}</p>
+      </header>
+    <div class="rsvps"><button class="hidden">RSVP</button>Who is going?  <span class="rsvp-names"></span></div>
+    <p class="content">{{ meeting.data.excerpt }}</p>
   </article>
 {%- endfor -%}
 

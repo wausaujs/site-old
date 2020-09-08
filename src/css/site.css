@@ -70,9 +70,10 @@ body {
   display: grid;
   grid-template-areas:
     "image header"
+    "image schedule"
     "image content";
   grid-template-columns: auto 1fr;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto auto 1fr;
   grid-gap: 1rem;
 }
 
@@ -85,6 +86,21 @@ body {
   grid-area: header;
 }
 
-.card p {
+.card .rsvps {
+  grid-area: schedule;
+}
+
+.rsvps button {
+  background-color: var(--theme-highlight);
+  color: white;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+}
+
+.card .content {
   grid-area: content;
+}
+
+.hidden {
+  display: none;
 }
